@@ -1,0 +1,75 @@
+<div class="content-wrapper">
+  <div class="page-header page-header-light">
+    <div class="page-header-content header-elements-md-inline">
+      <div class="page-title d-flex">
+        <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Meu perfil</span>
+        </h4>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+      </div>
+    </div>
+
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+      <div class="header-elements d-none">
+        <div class="breadcrumb justify-content-center">
+          <div class="breadcrumb-elements-item dropdown p-0">
+            <a href="/usuario/perfil" class="breadcrumb-elements-item ">
+              <i class="icon-user-plus mr-2"></i>
+              Perfil
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="d-flex align-items-start flex-column flex-md-row">
+      <div class="tab-content w-100 overflow-auto order-2 order-md-1">
+        <div class="tab-pane fade active show" id="settings">
+
+          <!-- Profile info -->
+          <div class="card">
+            <div class="card-header header-elements-inline">
+              <h5 class="card-title">Troca senha</h5>
+              <div class="header-elements">
+                <div class="list-icons">
+                  <a class="list-icons-item" data-action="collapse"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <%= form_for(@empregado, url: update_passworld_url(current_empregado), html: { method: :put }) do |f| %>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Nova senha</label>
+                      <%= f.password_field :password, autocomplete: "Nova senha", class:'form-control' %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Confirma senha</label>
+                      <%= f.password_field :password_confirmation, autocomplete: "repita nova senha", class:'form-control' %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <%= f.submit "Confirma", class:'btn btn-success' %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="content-wrapper">
+  <div class="page-header page-header-light">
+    <div class="page-header-content header-elements-md-inline">
+      <div class="page-title d-flex">
+        <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Meu perfil</span>
+        </h4>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+      </div>
+    </div>
+
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+      <div class="header-elements d-none">
+        <div class="breadcrumb justify-content-center">
+          <div class="breadcrumb-elements-item dropdown p-0">
+            <a href="/usuario/configuracao" class="breadcrumb-elements-item ">
+              <i class="icon-gear mr-2"></i>
+              Configurações
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="d-flex align-items-start flex-column flex-md-row">
+      <div class="tab-content w-100 overflow-auto order-2 order-md-1">
+        <div class="tab-pane fade active show" id="settings">
+
+          <!-- Profile info -->
+          <div class="card">
+            <div class="card-header header-elements-inline">
+              <h5 class="card-title">Informações de perfil</h5>
+              <div class="header-elements">
+                <div class="list-icons">
+                  <a class="list-icons-item" data-action="collapse"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <form action="#">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label>Setor</label>
+                      <input type="text" class="form-control bg-teal border-slate" value="<%= current_empregado.id %>" disabled>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Nome</label>
+                      <input type="text" class="form-control bg-slate border-slate" value="<%= current_empregado.nome_empregado %>" disabled>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Tipo de empregado</label>
+                      <input type="text" value="<%= tipo_empregado(current_empregado.tipo_empregado) %>"  class="form-control bg-slate border-slate" disabled>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Email</label>
+                      <input type="text" readonly="readonly" value="<%= current_empregado.email %>" class="form-control bg-slate border-slate" disabled>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
