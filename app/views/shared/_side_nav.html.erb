@@ -17,10 +17,7 @@
 						<a href="#"></a>
 					</div>
 					<div class="media-body">
-						<div class="media-title font-weight-semibold"><%#= current_empregado.nome_empregado.capitalize %></div>
-						<div class="font-size-xs opacity-50">
-							<i class="icon-vcard font-size-sm"></i> <%#= tipo_empregado(current_empregado.tipo_empregado) %> - <%= current_empregado.departamento %>
-						</div>
+						<div class="media-title font-weight-semibold"><%= current_usuario.apelido.capitalize %></div>
 					</div>
 					<div class="ml-3 align-self-center">
 						<a href="#" class="text-white"><i class="icon-cog3"></i></a>
@@ -40,7 +37,7 @@
 						<%if Rails.env.production? %>
 						<!-- toda task feita atualizar versão -->
 						<!-- Abaixo U+2193 -->
-						versão 1.3 &#10003;	
+						versão 0.1 &#10003;	
 						<% else %> 
 							<%= Rails.env %>
 						<% end %>

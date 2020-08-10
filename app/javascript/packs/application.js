@@ -18,9 +18,6 @@ require('datatables.net-bs4')
 require('datatables.net-bs4/css/dataTables.bootstrap4.min.css')
 require('../global_assets/js/plugins/pickers/daterangepicker')
 require('../global_assets/js/plugins/uploaders/fileinput/fileinput.min')
-require('./sortimentos')
-require("chartkick")
-require("chart.js")
 import toastr from 'toastr'
 window.toastr = toastr
 
@@ -96,8 +93,6 @@ document.addEventListener("turbolinks:load", () => {
 		containment: '.sortable-target',
 		items: '.select2-selection__choice:not(.select2-search--inline)'
 	})
-
-
 
 })
 
@@ -660,37 +655,16 @@ window.addEventListener('load', function () {
 });
 
 
-
-/* ------------------------------------------------------------------------------
- *
- *  # Tooltips and popovers
- *
- *  Demo JS code for components_popups.html page
- *
- * ---------------------------------------------------------------------------- */
-
-
-// Setup module
-// ------------------------------
-
 var Popups = function () {
 
-
-	//
-	// Setup module components
-	//
-
-	// Custom tooltip color
 	var _componentTooltipCustomColor = function () {
 		$('[data-popup=tooltip-custom]').tooltip({
 			template: '<div class="tooltip"><div class="arrow border-teal"></div><div class="tooltip-inner bg-teal"></div></div>'
 		});
 	};
 
-	// Tooltip events
 	var _componentTooltipEvents = function () {
 
-		// onShow event
 		$('#tooltip-show').tooltip({
 			title: 'I am a tooltip',
 			trigger: 'click'

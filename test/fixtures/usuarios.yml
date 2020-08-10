@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  sobrenome: MyString
+  perfil: 1
+  status: 
+
+two:
+  nome: MyString
+  sobrenome: MyString
+  perfil: 1
+  status: 

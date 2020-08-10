@@ -11,7 +11,7 @@
 
 	<div class="collapse navbar-collapse" id="navbar-mobile">
 		<span class="navbar-text ml-md-3 mr-md-auto">
-			<span class="text-white">Olá <%#= current_empregado.nome_empregado.capitalize %>, Hoje é <%= Time.now%>.</span>
+			<span class="text-white">Olá <%= current_usuario.apelido.capitalize %>, Hoje é <%= Time.now%>.</span>
 		</span>
 		<ul class="navbar-nav">
 			<li class="nav-item dropdown">
@@ -115,15 +115,15 @@
 
 			<li class="nav-item dropdown dropdown-user">
 				<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-					<span><%#= current_empregado.nome_empregado%></span>
+					<span><%= current_usuario.apelido.capitalize%></span>
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
-					<%=  link_to "<i class='icon-user-plus'></i> Meu perfil".html_safe, perfil_path, class:'dropdown-item' %>
+					<%=  link_to "<i class='icon-user-plus'></i> Meu perfil".html_safe, usuarios_perfil_path, class:'dropdown-item' %>
 	
 					<div class="dropdown-divider"></div>
-					<%=  link_to "<i class='icon-cog5'></i> Configuração da conta".html_safe, configuracao_path(current_empregado), class:'dropdown-item' %>
-					<%= link_to destroy_session_path(current_empregado), :method => 'delete', class: 'dropdown-item' do %>
-					<i class="icon-switch2"> </i>Sair
+					<%=  link_to "<i class='icon-cog5'></i> Configuração da conta".html_safe, configuracao_path(current_usuario), class:'dropdown-item' %>
+					<%= link_to destroy_session_path(current_usuario), :method => 'delete', class: 'dropdown-item' do %>
+					  <i class="icon-switch2"> </i>Sair
 					<% end %>
 				</div>
 			</li>

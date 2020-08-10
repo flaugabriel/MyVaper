@@ -10,7 +10,7 @@ class UsuariosController < ApplicationController
   def update_passworld
     @usuario = current_usuario
 
-    if @usuario.update(usuario_params)
+    if @usuario.update(usuario_params.merge(perfil: 1))
       bypass_sign_in(@usuario)
       flash[:success] = 'Senha atualizada!'
       redirect_to root_path

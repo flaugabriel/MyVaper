@@ -4,15 +4,13 @@
     <title>MyVaper</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', turbolink_track: true %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <% if empregado_signed_in?%>
+    <% if usuario_signed_in?%>
     <body>
       <%= flash_message %>
       <%= render 'shared/top_nav' %>
